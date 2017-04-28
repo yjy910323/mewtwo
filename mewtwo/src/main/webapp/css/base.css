@@ -1,0 +1,132 @@
+@CHARSET "UTF-8";
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	font-family: "微软雅黑"
+}
+
+body {
+	background-color: rgb(235, 240, 242);
+}
+
+.mewtwo-header {
+	background-color: #584F60;
+	color: white;
+}
+
+.mewtwo-logo {
+	letter-spacing: 3px;
+	padding: 15px 10px;
+}
+
+.mewtwo-clear {
+	clear: both;
+}
+
+.mewtwo-header .mewtwo-menu li {
+	margin: 15px 10px;
+}
+
+.mewtwo-menu {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.mewtwo-menu li {
+	float: left;
+}
+
+.mewtwo-menu.mewtwo-menu-avg-3 li {
+	padding-left: 0px;
+	width: 33.333%
+}
+
+.mewtwo-menu.mewtwo-menu-avg-4 li {
+	padding-left: 0px;
+	width: 25%
+}
+
+.mewtwo-menu li img {
+	cursor: pointer;
+}
+
+/* .mewtwo-header .mewtwo-menu li:not(:first-child ){
+	padding-left:15px;
+} */
+
+.mewtwo-section {
+	background-color: white;
+	margin-bottom: 10px;
+	padding: 0px 0px;
+}
+
+.mewtwo-nav {
+	color: black;
+	padding: 10px 10px;
+	border-bottom: 1px solid rgba(239, 239, 239, 0.5);
+}
+
+.mewtwo-nav.mewtwo-full-screen {
+	padding: 0px 0px;
+	margin: 0px 0px;
+	border-bottom: none;
+	background-color: rgb(235, 240, 242);
+}
+
+.mewtwo-section .mewtwo-nav .mewtwo-title {
+	font-size: 13px;
+	line-height: 19px;
+}
+
+.mewtwo-center {
+	margin: 0px auto;
+}
+
+.mewtwo-text-center {
+	text-align: center;
+}
+
+.mewtwo-text-right {
+	text-align: right;
+}
+
+.mewtwo-section .mewtwo-nav img {
+	vertical-align: initial;
+}
+
+.mewtwo-bignum {
+	font-size: 35px;
+}
+
+.mewtwo-middlenum {
+	font-size: 23px;
+}
+
+.mewtwo-smallnum {
+	font-size: 12px;
+}
+
+.mewtwo-left {
+	float: left;
+}
+
+.mewtwo-right {
+	float: right;
+}
+
+.mewtwo-color {
+	color: #584F60
+}
+
+.mewtwo-color-gray {
+	color: #999999
+}
+
+.mewtwo-avatar {
+	height: 30px;
+	width: 30px;
+	border-radius: 20px;
+	border: 2px solid rgb(33, 199,137);
+}
