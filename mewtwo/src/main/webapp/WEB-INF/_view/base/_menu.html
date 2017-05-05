@@ -1,0 +1,33 @@
+<#macro menu active>
+	<footer id='menu'>
+		<div class="mewtwo-footer">
+			<ul class="mewtwo-menu mewtwo-menu-avg-4 mewtwo-color-gray">
+				<li onclick="window.location='${contextPath}/practise'" <#if active=='practise'>class="active"</#if>>
+					<div style="margin: 6px 0px 2px 0px;;line-height: 12px;" class="mewtwo-smallnum mewtwo-text-center">
+						<span style="font-size: 20px;" class="glyphicon glyphicon-book"></span>
+						<div class="mewtwo-littlenum">练习</div>
+					</div>
+				</li>
+				<li onclick="window.location='${contextPath}/findation'" <#if active=='findation'>class="active"</#if> >
+					<div style="margin: 6px 0px 2px 0px;;line-height: 12px;" class="mewtwo-smallnum mewtwo-text-center">
+						<span style="font-size: 20px;" class=" glyphicon glyphicon-adjust"></span>
+						<div class="mewtwo-littlenum">发现</div>
+					</div>
+				</li>
+				<li onclick="window.location='${contextPath}/feed'" <#if active=='feed'>class="active"</#if> >
+					<div style="margin: 6px 0px 2px 0px;;line-height: 12px;" class="mewtwo-smallnum mewtwo-text-center">
+						<span style="font-size: 20px;" class="glyphicon glyphicon-align-left"></span>
+						<div class="mewtwo-littlenum">动态</div>
+					</div>
+				</li>
+				<li onclick="window.location='${contextPath}/me'" <#if active=='me'>class="active"</#if> >
+					<div style="margin: 6px 0px 2px 0px;line-height: 12px;" class="mewtwo-smallnum mewtwo-text-center">
+						<span style="font-size: 20px;" class="glyphicon glyphicon-user"></span>
+						<div class="mewtwo-littlenum">我</div>
+					</div>
+				</li>
+			</ul>
+			<div class="mewtwo-clear"></div>
+		</div>
+	</footer>
+</#macro>

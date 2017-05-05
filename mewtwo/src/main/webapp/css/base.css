@@ -1,18 +1,32 @@
 @CHARSET "UTF-8";
-
+/* @font-face {
+	font-family: noto-medium;
+	src: url('../fonts/NotoSansCJKsc-Medium.otf');
+}  */
 html, body {
 	margin: 0px;
 	padding: 0px;
-	font-family: "微软雅黑"
+	font-family: 'Open Sans','Helvetica Neue',Arial,'Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
 }
 
 body {
 	background-color: rgb(235, 240, 242);
 }
-
+a {
+	text-decoration:none;
+	color: white;
+}
 .mewtwo-header {
 	background-color: #584F60;
 	color: white;
+}
+
+.mewtwo-footer {
+	width: 100%;
+	border-top: 1px solid rgb(221, 221, 221);
+	background-color: white;
+	position: fixed;
+	bottom: 0px;
 }
 
 .mewtwo-logo {
@@ -24,14 +38,32 @@ body {
 	clear: both;
 }
 
+.mewtwo-header .mewtwo-menu.mewtwo-second-menu li.active {
+	border-bottom: 2px solid white;
+	color: white;
+}
+
 .mewtwo-header .mewtwo-menu li {
-	margin: 15px 10px;
+	padding: 15px 10px;
+}
+
+.mewtwo-header .mewtwo-menu.mewtwo-second-menu li {
+	padding: 12px 0px;
+	
+}
+
+#container > section {
+	position: absolute;
 }
 
 .mewtwo-menu {
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
+}
+
+.mewtwo-second-menu {
+	font-size: 15px
 }
 
 .mewtwo-menu li {
@@ -48,6 +80,19 @@ body {
 	width: 25%
 }
 
+.mewtwo-menu.mewtwo-menu-avg-4 li.active {
+	color: #584F60
+}
+
+.mewtwo-navigation .glyphicon {
+	color: #999999;
+	margin: 0px 0px 0px 15px;
+}
+
+.mewtwo-section .swiper-slide {
+	background-size: 100% 100%;
+}
+
 .mewtwo-menu li img {
 	cursor: pointer;
 }
@@ -62,10 +107,100 @@ body {
 	padding: 0px 0px;
 }
 
+.mewtwo-section.mewtwo-small-margin{
+	margin-bottom: 2px;
+}
+
+.mewtwo-image-section {
+	min-height:165px;
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+	padding-top: 8px;
+}
+
+
+.mewtwo-menu.mewtwo-menu-avg-3.mewtwo-image-plate li {
+	background-color: red;
+	width:32%;
+	/* padding-bottom: 32%; */
+ 	height: 32vw;	
+ 	background-size: 100% 100%;
+ 	word-wrap:break-word;
+ 	word-break: break-all;
+ 	color: white;
+ 	font-size: 12px;
+}
+
+
+/* .mewtwo-menu.mewtwo-menu-avg-3.mewtwo-image-plate li:after {
+  content: '';
+  display: block;
+  margin-top: 32%; margin 百分比相对父元素宽度计算
+}
+ */
+.mewtwo-image-plate li:not(:LAST-CHILD) {
+	margin-right: 2%;
+}
+
+.mewtwo-clearfix-bottom {
+	margin-bottom: 50px;
+}
+
+.mewtwo-image-section .mewtwo-title {
+	color: white;
+	font-size: 25px;
+}
+
+.mewtwo-image-section .mewtwo-title-info {
+	color: white;
+	font-size: 12px;
+	padding: 8px 0px 0px 0px;
+}
+
+.mewtwo-image-section .mewtwo-title-message {
+	color: white;
+	font-size: 12px;
+	padding: 35px 0px 0px 0px;
+}
+
+.mewtwo-slide {
+	width: 100%;
+	overflow: hidden;
+}
+
+.mewtwo-slide-wrapper {
+	overflow: auto;
+	overflow-y: hidden;
+	padding-bottom: 10px;
+}
+
+.mewtwo-slide-inside {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.mewtwo-slide-section {
+	float: left;
+	margin-right: 10px;
+}
+
+.mewtwo-tag {
+	position: absolute;
+	left: 0px;
+	top: 6px;
+	background: #48c87b;
+	color: white;
+	font-size: 10px;
+	padding: 3px 10px 3px 5px;
+	border-radius: 0px 10px 10px 0px;
+}
+
 .mewtwo-nav {
 	color: black;
-	padding: 10px 10px;
+	padding: 12px;
 	border-bottom: 1px solid rgba(239, 239, 239, 0.5);
+	position: relative;
 }
 
 .mewtwo-nav.mewtwo-full-screen {
@@ -78,6 +213,10 @@ body {
 .mewtwo-section .mewtwo-nav .mewtwo-title {
 	font-size: 13px;
 	line-height: 19px;
+}
+
+.mewtwo-practise-title {
+	font-family: "黑体"
 }
 
 .mewtwo-center {
@@ -108,6 +247,10 @@ body {
 	font-size: 10px;
 }
 
+.mewtwo-littlenum {
+	font-size: 8px;
+}
+
 .mewtwo-left {
 	float: left;
 }
@@ -125,8 +268,68 @@ body {
 }
 
 .mewtwo-avatar {
-	height: 30px;
-	width: 30px;
+	height: 23px;
+	width: 23px;
 	border-radius: 20px;
-	border: 2px solid rgb(33, 199,137);
+	border: 2px solid rgb(33, 199, 137);
+}
+
+.mewtwo-level {
+	padding-top: 1px;
+	font-size: 11px;
+}
+
+.mewtwo-text-vcenter li{
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  
+  display: -o-box;
+  -o-box-orient: horizontal;
+  -o-box-pack: center;
+  -o-box-align: center;
+  
+  display: -ms-box;
+  -ms-box-orient: horizontal;
+  -ms-box-pack: center;
+  -ms-box-align: center;
+  
+  display: box;
+  box-orient: horizontal;
+  box-pack: center;
+  box-align: center;
+}
+
+.gray { 
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+}
+
+.little-gray { 
+    -webkit-filter: grayscale(70%);
+    -moz-filter: grayscale(70%);
+    -ms-filter: grayscale(70%);
+    -o-filter: grayscale(70%);
+    filter: grayscale(70%);
+    filter: gray;
+}
+
+header.affix {
+	position: fixed;
+	width: 100%;
+	z-index: 99999;
+	top: 0px;
+}
+.affix-top {
+	position: relative;
 }

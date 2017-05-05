@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<#include "../../base/_head.html" />
+	<link href="${contextPath}/css/swiper-3.4.2.min.css" rel="stylesheet">
+	<style type="text/css">
+	.swiper-container {
+	    width: 100%;
+	    height: 160px;
+	}  
+	</style>
+</head>
+<body style="">
+	
+	<header>
+		<#include "../../base/_title.html" />
+		<@title titleName='发现' />
+	</header>
+	<header>
+		<@secondTitle titleName=["精选,#","练习,practise","笔记,notes","商城,shop"] url="findation" active="精选" />
+	</header>
+	
+	
+	
+	<section class="mewtwo-section">
+		<div class="swiper-container">
+		    <div class="swiper-wrapper">
+		        <div style="background-image: url('${contextPath}/img/practise/gelintonghua.png')" class="swiper-slide">
+		        	<div class="mewtwo-tag">
+		        		练习
+		        	</div>
+		        </div>
+		        <div style="background-image: url('${contextPath}/img/practise/jingdiangushiwen.jpg')" class="swiper-slide">
+		        	<div class="mewtwo-tag">
+		        		练习
+		        	</div>
+		        </div>
+		        <div style="background-image: url('${contextPath}/img/practise/susuanrumen.jpg')" class="swiper-slide">
+		        	<div class="mewtwo-tag">
+		        		笔记
+		        	</div>
+		        </div>
+		        <div style="background-image: url('${contextPath}/img/practise/yingyuduanpianyuedu.png')" class="swiper-slide">
+		        	<div class="mewtwo-tag">
+		        		商品
+		        	</div>
+		        </div>
+		    </div>
+		</div>
+	</section>
+	
+	<section class="mewtwo-section">
+		<div style="border-bottom: none;" class="mewtwo-nav">
+			<div class="mewtwo-left mewtwo-title">
+				学习攻略
+			</div>
+			<div class="mewtwo-right mewtwo-navigation">
+				<a href="${contextPath}/findation/notes"><span class="glyphicon glyphicon-menu-right" data-url=''></span></a>
+			</div>
+			<div class="mewtwo-clear"></div>
+		</div>
+		<div class="mewtwo-nav">
+			<ul class="mewtwo-menu mewtwo-text-center mewtwo-text-vcenter mewtwo-menu-avg-3 mewtwo-image-plate little-gray">
+				<li style="background-image: url('${contextPath}/img/notes/notes1.jpg')">
+					#记忆方法#
+				</li>
+				<li>
+					#速记单词#
+				</li>
+				<li>
+					#英语音标#
+				</li>
+			</ul>
+			<div class="mewtwo-clear"></div>
+		</div>
+		
+	</section>
+	
+	
+	<section class="mewtwo-section">
+		<div style="border-bottom: none;" class="mewtwo-nav">
+			<div class="mewtwo-left mewtwo-title">
+				线下交流会
+			</div>
+			<div class="mewtwo-right mewtwo-navigation">
+				<a href="${contextPath}/findation/notes"><span class="glyphicon glyphicon-menu-right" data-url=''></span></a>
+			</div>
+			<div class="mewtwo-clear"></div>
+		</div>
+	</section>
+	
+	
+	<section class="mewtwo-section">
+		<div style="border-bottom: none;" class="mewtwo-nav">
+			<div class="mewtwo-left mewtwo-title">
+				小组推荐
+			</div>
+			<div class="mewtwo-right mewtwo-navigation">
+				<a href="${contextPath}/findation/notes"><span class="glyphicon glyphicon-menu-right" data-url=''></span></a>
+			</div>
+			<div class="mewtwo-clear"></div>
+		</div>
+	</section>
+	
+	<section class="mewtwo-section">
+		<div style="border-bottom: none;" class="mewtwo-nav">
+			<div class="mewtwo-left mewtwo-title">
+				教师达人
+			</div>
+			<div class="mewtwo-right mewtwo-navigation">
+				<a href="${contextPath}/findation/notes"><span class="glyphicon glyphicon-menu-right" data-url=''></span></a>
+			</div>
+			<div class="mewtwo-clear"></div>
+		</div>
+	</section>
+	
+	<section class="mewtwo-section">
+		<div style="border-bottom: none;" class="mewtwo-nav">
+			<div class="mewtwo-left mewtwo-title">
+				精选文章
+			</div>
+			<div class="mewtwo-right mewtwo-navigation">
+				<a href="${contextPath}/findation/notes"><span class="glyphicon glyphicon-menu-right" data-url=''></span></a>
+			</div>
+			<div class="mewtwo-clear"></div>
+		</div>
+	</section>
+	
+	<div class='mewtwo-clearfix-bottom'></div>
+	
+	<footer>
+		<#include "../../base/_menu.html" />
+		<@menu active='findation' />		
+	</footer>
+	
+	<#include "../../base/_js.html" />
+	<script src="${contextPath}/js/swiper-3.4.2.jquery.min.js"></script>
+	<script src="${contextPath}/js/bootstrap.affix.min.js"></script>
+	<script type="text/javascript">
+		var mySwiper = new Swiper ('.swiper-container', {
+			loop: true
+		})     
+	</script>
+	
+	
+</body>
+</html>

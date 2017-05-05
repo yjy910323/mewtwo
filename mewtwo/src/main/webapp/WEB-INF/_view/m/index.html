@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<#include "../base/_head.html">
+</head>
+<body style="">
+	
+	<header>
+		<#include "../base/_title.html">
+	</header>
+	<div style="position: relative;" id="container">
+		<section id="practise">
+					
+		</section>
+	</div>
+	
+	<div class="mewtwo-clearfix-bottom"></div>
+	
+	<footer>
+		<#include "../base/_menu.html">
+		<@menu active='practise' />		
+	</footer>
+	
+	<#include "../base/_js.html">
+	
+	<script type="text/javascript">
+		Zepto(function($){
+			
+			var windowWidth = $(window).width()
+			$("#container>section").css("width", windowWidth+"px");
+						
+			var $currentSection = $('section#practise');
+			$currentSection.load('/practise');
+			
+			$(document).on('tap','[data-url]',function(){
+				var url = $(this).data("url");
+				var needMenu = $(this).data("menu");
+				var id = url.replaceAll("/","");
+				$newSection = $("section#"+id);
+				if(needMenu == 0){
+					$("#menu").hide();
+				}else{
+					$("#menu").show();
+				}
+				
+				if($newSection.length == 0){
+					$newSection = $('<section></section>', {  
+					    id: id
+				  	});  
+					$newSection.css({
+						width: windowWidth + 'px',
+						left: windowWidth + 'px'
+					})
+					$newSection.appendTo($('#container'));  
+					$newSection.load(url,function(){
+						/* $currentSection.animate({
+							translate3d: -windowWidth+'px,0,0'
+						},'600','linear',function(){
+							$currentSection.hide()
+						})  */
+						$newSection.animate({
+							translate3d: -windowWidth+'px,0,0'
+						},'200','easy-in',function(){
+							$currentSection.hide();
+							$('body').scrollTo({
+								durTime:300
+							})
+						})
+						
+					});
+					
+				}else{
+					
+				}
+			});
+		}) 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		$.fn.scrollTo =function(options){
+        var defaults = {
+            toT : 0,    //滚动目标位置
+            durTime : 500,  //过渡动画时间
+            delay : 30,     //定时器时间
+            callback:null   //回调函数
+        };
+        var opts = $.extend(defaults,options),
+            timer = null,
+            _this = this,
+            curTop = _this.scrollTop(),//滚动条当前的位置
+            subTop = opts.toT - curTop,    //滚动条目标位置和当前位置的差值
+            index = 0,
+            dur = Math.round(opts.durTime / opts.delay),
+            smoothScroll = function(t){
+                index++;
+                var per = Math.round(subTop/dur);
+                if(index >= dur){
+                    _this.scrollTop(t);
+                    window.clearInterval(timer);
+                    if(opts.callback && typeof opts.callback == 'function'){
+                        opts.callback();
+                    }
+                    return;
+                }else{
+                    _this.scrollTop(curTop + index*per);
+                }
+            };
+        timer = window.setInterval(function(){
+            smoothScroll(opts.toT);
+        }, opts.delay);
+        return _this;
+    };
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

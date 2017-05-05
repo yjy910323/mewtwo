@@ -1,5 +1,7 @@
 package org.yan.mewtwo.config;
 
+import org.yan.mewtwo.controller.FindationController;
+import org.yan.mewtwo.controller.IndexController;
 import org.yan.mewtwo.controller.PractiseController;
 import org.yan.mewtwo.interceptor.ClientInterceptor;
 
@@ -39,7 +41,9 @@ public class WebConfig extends JFinalConfig {
 
 	@Override
 	public void configRoute(Routes me) {
-		me.add("/", PractiseController.class);
+		me.add("/", IndexController.class);
+		me.add("/practise", PractiseController.class);
+		me.add("/findation", FindationController.class);
 	}
 
 	@Override

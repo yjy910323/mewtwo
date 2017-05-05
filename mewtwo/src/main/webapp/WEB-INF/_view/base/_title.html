@@ -1,0 +1,44 @@
+<#macro title titleName='睿学'>
+	<div id="title" class="mewtwo-header">
+		<div class="mewtwo-left mewtwo-logo">
+			${titleName}
+		</div>
+		<div class="mewtwo-right">
+			<ul class="mewtwo-menu">
+				<li>
+					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+				</li>
+				<li>
+					<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+				</li>
+			</ul>			
+		</div>
+		<div class="mewtwo-clear"></div>
+	</div>
+</#macro>
+
+<#macro backTitle titleName>
+	<div id="title" class="mewtwo-header">
+		<div class="mewtwo-left mewtwo-logo">
+			<a style="color: white;vertical-align: text-top;" href="javascript:history.go(-1);"><span class="glyphicon glyphicon-menu-left" data-url=''></span></a>
+			 ${titleName}
+		</div>
+		<div class="mewtwo-clear"></div>
+	</div>
+</#macro>
+
+
+<#macro secondTitle titleName=[] url='' active=''>
+	<div id="title" class="mewtwo-header">
+		<ul class="mewtwo-menu mewtwo-second-menu mewtwo-text-center mewtwo-menu-avg-${(titleName?size)!'4'}">
+			<#list titleName as title>
+				<#assign tName = title?split(',')[0] />
+				<#assign tUrl = title?split(',')[1] />
+				<li <#if active==tName>class="active"</#if> >
+					<a href="${contextPath}/${url}/${tUrl}">${tName}</a>
+				</li>
+			</#list>
+		</ul>
+		<div class="mewtwo-clear"></div>
+	</div>
+</#macro>
