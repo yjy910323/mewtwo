@@ -89,8 +89,14 @@ a {
 	margin: 0px 0px 0px 15px;
 }
 
-.mewtwo-section .swiper-slide {
+#slide-section .mewtwo-section .swiper-slide {
 	background-size: 100% 100%;
+}
+
+#group-section .mewtwo-swipe-body {
+	margin-right:10px;
+	height: 0;
+	padding-bottom: 100%;
 }
 
 .mewtwo-menu li img {
@@ -218,6 +224,49 @@ a {
 .mewtwo-practise-title {
 	font-family: "黑体"
 }
+
+.mewtwo-offline-activity {
+	position:relative;
+	height: 0;
+	overflow: hidden;
+	margin: 0;
+	padding-bottom: 40%;
+}
+
+.mewtwo-offline-activity:NOT(:FIRST-CHILD){
+	margin-top:15px;
+}
+
+.mewtwo-offline-activity img{
+	width: 100%;
+}
+
+.mewtwo-offline-activity-tag {
+	position: absolute;
+	top: 55%;
+	left: 10px;
+}
+
+.mewtwo-offline-activity-tag span{
+	background-color: white;
+	border-radius: 3px;
+	padding: 3px 5px;
+	color: black;
+	font-size: 10px;
+}
+
+.mewtwo-offline-activity-title {
+	position: absolute;
+	top: 75%;
+	left: 10px;
+}
+
+.mewtwo-offline-activity-title span{
+	padding: 3px 5px 3px 0px;
+	color: white;
+	font-size: 16px;
+}
+
 
 .mewtwo-center {
 	margin: 0px auto;

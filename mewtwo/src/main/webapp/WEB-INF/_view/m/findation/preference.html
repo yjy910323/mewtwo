@@ -6,7 +6,6 @@
 	<style type="text/css">
 	.swiper-container {
 	    width: 100%;
-	    height: 160px;
 	}  
 	</style>
 </head>
@@ -22,8 +21,8 @@
 	
 	
 	
-	<section class="mewtwo-section">
-		<div class="swiper-container">
+	<section id='slide-section' class="mewtwo-section">
+		<div style="height: 160px;" class="swiper-container">
 		    <div class="swiper-wrapper">
 		        <div style="background-image: url('${contextPath}/img/practise/gelintonghua.png')" class="swiper-slide">
 		        	<div class="mewtwo-tag">
@@ -87,10 +86,32 @@
 			</div>
 			<div class="mewtwo-clear"></div>
 		</div>
+		
+		<div class="mewtwo-nav">
+			<div class="mewtwo-offline-activity">
+				<div class="mewtwo-offline-activity-tag">
+					<span>活动进行中</span>
+				</div>
+				<div class="mewtwo-offline-activity-title">
+					<span>学习交流：长宁小升初交流会</span>
+				</div>
+				<img src="${contextPath}/img/offline/offline.fw.png">
+			</div>
+		
+			<div class="mewtwo-offline-activity">
+				<div class="mewtwo-offline-activity-tag">
+					<span>活动进行中</span>
+				</div>
+				<div class="mewtwo-offline-activity-title">
+					<span>学习交流：长宁小升初交流会</span>
+				</div>
+				<img src="${contextPath}/img/offline/offline.fw.png">
+			</div>
+		</div>
 	</section>
 	
 	
-	<section class="mewtwo-section">
+	<section id="group-section" class="mewtwo-section">
 		<div style="border-bottom: none;" class="mewtwo-nav">
 			<div class="mewtwo-left mewtwo-title">
 				小组推荐
@@ -99,6 +120,33 @@
 				<a href="${contextPath}/findation/notes"><span class="glyphicon glyphicon-menu-right" data-url=''></span></a>
 			</div>
 			<div class="mewtwo-clear"></div>
+		</div>
+		
+		<div class="mewtwo-nav">
+			<div style="" class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide">
+			        	<div class="mewtwo-swipe-body">
+			        		slider1
+			        	</div>
+			        </div>
+				   <div class="swiper-slide">
+			        	<div class="mewtwo-swipe-body">
+			        		slider2
+			        	</div>
+			        </div>
+			        <div class="swiper-slide">
+			        	<div class="mewtwo-swipe-body">
+			        		slider3
+			        	</div>
+			        </div>
+			        <div class="swiper-slide">
+			        	<div class="mewtwo-swipe-body">
+			        		slider4
+			        	</div>
+			        </div>
+			    </div>
+			</div>
 		</div>
 	</section>
 	
@@ -137,9 +185,14 @@
 	<script src="${contextPath}/js/swiper-3.4.2.jquery.min.js"></script>
 	<script src="${contextPath}/js/bootstrap.affix.min.js"></script>
 	<script type="text/javascript">
-		var mySwiper = new Swiper ('.swiper-container', {
+		var slideSwiper = new Swiper ('#slide-section .swiper-container', {
 			loop: true
-		})     
+		})  
+		var groupSwiper = new Swiper ('#group-section .swiper-container', {
+			loop: true,
+			slidesPerView : 2,
+			slidesPerGroup : 2,
+		})  
 	</script>
 	
 	
