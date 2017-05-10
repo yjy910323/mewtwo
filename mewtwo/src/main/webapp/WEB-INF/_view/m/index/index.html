@@ -2,6 +2,7 @@
 <html lang="zh-CN">
 <head>
 	<#include "../../base/_head.html">
+	<link href="${contextPath}/css/swiper-3.4.2.min.css" rel="stylesheet">
 </head>
 <body style="">
 	
@@ -135,26 +136,25 @@
 		</div>
 		
 		<div class="mewtwo-nav">
-			<div style="height:90px;" class="mewtwo-slide">
-				<div style="" class="mewtwo-slide-wrapper">
-					<ul style="width:575px;" class="mewtwo-slide-inside">
-						<li class="mewtwo-slide-section">
-							<div style="width:185px;height:120px;background-image: url(${contextPath}/img/practise/jingdiangushiwen.jpg)">
-							</div>
-						</li>
-						<li class="mewtwo-slide-section">
-							<div>
-								<img style="width:185px;height:120px;" alt="" src="${contextPath}/img/practise/jingdiangushiwen.jpg">
-							</div>
-						</li>
-						<li class="mewtwo-slide-section">
-							<div>
-								<img style="width:185px;height:120px;" alt="" src="${contextPath}/img/practise/jingdiangushiwen.jpg">
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide">
+			            <img style="height: 120px;width:100%;" data-src="${contextPath}/img/practise/jingdiangushiwen.jpg" class="swiper-lazy">
+			            <div class="swiper-lazy-preloader"></div>
+			        </div>
+			        <div class="swiper-slide">
+			            <img style="height: 120px;width:100%;" data-src="${contextPath}/img/practise/susuanrumen.jpg" class="swiper-lazy">
+			            <div class="swiper-lazy-preloader"></div>
+			        </div>
+			        <div class="swiper-slide">
+			            <img style="height: 120px;width:100%;" data-src="${contextPath}/img/practise/gelintonghua.png" class="swiper-lazy">
+			            <div class="swiper-lazy-preloader"></div>
+			        </div>
+			        <!-- <div class="swiper-slide">
+			            <div data-background="${contextPath}/img/practise/jingdiangushiwen.jpg" class="swiper-lazy">slide3</div>
+			        </div> -->
+			    </div>
+			</div> 
 		</div>
 		
 	</section>
@@ -171,27 +171,25 @@
 		</div>
 		
 		<div class="mewtwo-nav">
-			<div style="height:130px;" class="mewtwo-slide">
-				<div style="height:140px;" class="mewtwo-slide-wrapper">
-					<ul style="width:575px;" class="mewtwo-slide-inside">
-						<li class="mewtwo-slide-section">
-							<div>
-								<img style="width:185px;height:120px;" alt="" src="${contextPath}/img/practise/jingdiangushiwen.jpg">
-							</div>
-						</li>
-						<li class="mewtwo-slide-section">
-							<div>
-								<img style="width:185px;height:120px;" alt="" src="${contextPath}/img/practise/jingdiangushiwen.jpg">
-							</div>
-						</li>
-						<li class="mewtwo-slide-section">
-							<div>
-								<img style="width:185px;height:120px;" alt="" src="${contextPath}/img/practise/jingdiangushiwen.jpg">
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide">
+			            <img style="height: 120px;width:100%;" data-src="${contextPath}/img/practise/jingdiangushiwen.jpg" class="swiper-lazy">
+			            <div class="swiper-lazy-preloader"></div>
+			        </div>
+			        <div class="swiper-slide">
+			            <img style="height: 120px;width:100%;" data-src="${contextPath}/img/practise/susuanrumen.jpg" class="swiper-lazy">
+			            <div class="swiper-lazy-preloader"></div>
+			        </div>
+			        <div class="swiper-slide">
+			            <img style="height: 120px;width:100%;" data-src="${contextPath}/img/practise/gelintonghua.png" class="swiper-lazy">
+			            <div class="swiper-lazy-preloader"></div>
+			        </div>
+			        <!-- <div class="swiper-slide">
+			            <div data-background="${contextPath}/img/practise/jingdiangushiwen.jpg" class="swiper-lazy">slide3</div>
+			        </div> -->
+			    </div>
+			</div> 
 		</div>
 	</section>
 	
@@ -202,6 +200,18 @@
 		<@menu active='practise' />		
 	</footer>
 	
-	<#include "../../base/_js.html">
+	<#include "../../base/_js.html" />
+	<script src="${contextPath}/js/swiper-3.4.2.jquery.min.js"></script>
+	<script type="text/javascript">
+		var slideSwiper = new Swiper ('.swiper-container', {
+			loop: false,
+			lazyLoading : true,
+			lazyLoadingInPrevNext : true,
+			spaceBetween : 20,
+			//effect : 'coverflow',
+			slidesPerView: 1.4,
+			centeredSlides: true,
+		})  
+	</script>
 </body>
 </html>

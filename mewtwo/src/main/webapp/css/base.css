@@ -9,9 +9,16 @@ html, body {
 	font-family: 'Open Sans','Helvetica Neue',Arial,'Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
 }
 
+
 body {
 	background-color: rgb(235, 240, 242);
 }
+
+footer {
+	z-index: 999999999;
+	position: relative;
+}
+
 a {
 	text-decoration:none;
 	color: white;
@@ -295,7 +302,25 @@ a {
 	color: white;
 	font-size: 16px;
 }
+.mewtwo-telnet-avatar {
+	width:100%;height:100%;border-radius: 100%;
+}
 
+.mewtwo-telnet-info {
+	padding-left: 10px;padding-top:2px;overflow: hidden;text-overflow: ellipsis;
+}
+
+.mewtwo-telnet-info div{
+	font-size:16px;
+}
+
+.mewtwo-telnet-info nobr{
+	font-size: 12px;color: #999999;padding-top:2px;
+}
+
+.mewtwo-telnet-follow {
+	border-radius: 15px;padding:0px 7px;border: 1px solid rgb(152,201,186);line-height:25px;font-size: 13px;color: rgb(152,201,186);text-align: center;
+}
 
 .mewtwo-center {
 	margin: 0px auto;
@@ -411,3 +436,7 @@ header.affix {
 .affix-top {
 	position: relative;
 }
+
+.swiper-container {
+    width: 100%;
+}  
