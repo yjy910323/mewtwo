@@ -13,4 +13,8 @@ public class FindationController extends BaseController {
 	public void practise(){
 		render(getViewPath() + "findation/practise.html");
 	}
+	
+	public void notes(){
+		render(getViewPath() + "findation/notes.html");
+	}
 }
